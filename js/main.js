@@ -1,6 +1,21 @@
 (function ($) {
   "use strict";
 
+  var wind = $(window);
+  var sticky = $("#sticky-header");
+  wind.on("scroll", function () {
+    var scroll = wind.scrollTop();
+    if (scroll < 5) {
+      sticky.removeClass("sticky");
+    } else {
+      sticky.addClass("sticky");
+    }
+  });
+  $(window).on("load resize", function () {
+    $(".header-section").height($(".header-in").outerHeight());
+    $("body").css("--header-height", $(".header-in").outerHeight() + "px");
+  });
+
   // offcanvas-js
   $(".offcanvas-open").click(function () {
     $(".offcanvas-menu").addClass("active");
@@ -45,6 +60,11 @@
         // loop: false,
       },
     },
+  });
+
+  $(window).on("load resize", function () {
+    $(".footer-section").height($(".footer-in").outerHeight());
+    $("body").css("--footer-height", $(".footer-in").outerHeight() + "px");
   });
 })(jQuery);
 

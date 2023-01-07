@@ -6,6 +6,7 @@
         width: unset;
         display: flex; 
         align-items: center;
+        padding: 11px 0 12px;
     }
     .header__user::after {
         display: none;
@@ -16,6 +17,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+    }
+    .header__top::after {
+        content: '';
+        height: 100%;
+        width: 5000px;
+        left: -2200px;
+        display: block;
+        position: absolute;
+        top: 0;
+        background: #222222;
+        z-index: -1;
     }
     .header__buttons__button {
         padding: 10px 25px;
@@ -26,24 +39,27 @@
         height: 150px;
         width: 150px;
         padding: 5px;
+        margin-bottom: -90px;
     }
     .header__user__tc__name {
-        font-size: 24px;
-        margin: 0 0 5px;
-        color: #131313;
+        font-size: 16px;
+        margin: 0 0 2px;
     }
     .header__user__tc__store-name {
-        font-size: 24px;
+        font-size: 16px;
     }
     .header__user__tc__sb {
-        font-size: 16px;
-        margin: 0 0 18px;
+        font-size: 14px;
+        margin: 0 0 10px;
     }
     .header__bottom p {
         font-size: 16px;
         text-align: center;
         color: #7E7E7E;
         line-height: 2;
+    }
+    .header__buttons {
+        margin-top: 0;
     }
 
 
@@ -128,14 +144,8 @@
         display: inline-flex;
     }
 
-    .app-install_row .installation-options .install-link {
-        height: 45px;
-    }
-    .app-install_row .install-text {
-        width: 150px;
-    }
-    .footer-section {
-        padding: 30px 0 35px;
+    .footer-in {
+        padding: 20px 0 17px;
     }
     .more-section__bottom {
         margin: 35px 0 0;
@@ -159,14 +169,48 @@
         margin: 0 0 0 15px;
         padding: 0 0 0 8px;
     }
+    .header__buttons {
+        margin: 14px 0 0;
+        gap: 10px;
+    }
+    .header__user {
+        padding: 9px 0 8px;
+        gap: 10px;
+    }
 
     .header__user__image {
-        margin: 0px 0 0px;
-        height: 80px;
-        width: 80px;
+        margin: 0px 0 -50px;
+        height: 75px;
+        width: 75px;
     }
     .header__bottom p {
-        font-size: 12px;
+        font-size: 11px;
+    }
+    .header__buttons__button .left h4 {
+        font-size: 14px;
+        margin: 0 0 2px;
+    }
+    .header__bottom p .klarna {
+        width: 170px;
+    }
+    .header__user__tc__name {
+        font-size: 13px;
+    }
+    .header__user__tc__store-name {
+        font-size: 13px;
+        color: #F46262;
+        font-weight: 500;
+    }
+    .header__user__tc__sb .cart-img {
+        width: 12px;
+    }
+    .header__user__tc__sb .txt {
+        margin: 1px 0 0;
+    }
+    .header__user__tc__sb {
+        font-size: 10px;
+        margin: 0 0 6px;
+        gap: 5px;
     }
 
     .product-view__tpd__right .check {
@@ -188,5 +232,10 @@
     }
     .product-view__description__scane h3 {
         font-size: 20px;
+    }
+
+
+    .app-install_row .install-text {
+        width: 80px;
     }
 }
