@@ -108,6 +108,7 @@ p:last-child{
   background: rgba(255, 255, 255, 0.9);
   width: 100%;
   backdrop-filter: blur(10px);
+  transition: 0.3s;
 }
 .header-in {
 	border-bottom: 2px solid #dadada;
@@ -118,7 +119,8 @@ p:last-child{
 }
 
 .header__top {
-
+  position: relative;
+  z-index: 2;
 }
 .header__user {
   padding: 11px 0 10px;
@@ -146,6 +148,7 @@ p:last-child{
   width: 95px;
   padding: 3px;
   border-radius: 50%;
+  transition: 0.3s;
   background: linear-gradient(to right, #F26263,#713A8C);
 }
 .header__user__image__inner {
@@ -242,6 +245,7 @@ p:last-child{
 
 .header__bottom {
 	margin: 6px 0 0;
+  transition: 0.3s;
 }
 .header__bottom p {
   font-size: 14px;
@@ -251,6 +255,35 @@ p:last-child{
 }
 .header__bottom p .klarna {
   width: 230px;
+}
+
+@media (max-width: 768px) {
+  .header-section.sticky .header-in {
+    background: #222222;
+    padding: 0;
+    border-width: 0px;
+  }
+  .header-section.sticky .header__user {
+    display: none;
+  }
+  .header-section.sticky .header__bottom {
+    display: none;
+  }
+  .header-section.sticky .header__buttons {
+    padding: 14px 0;
+    margin: 0;
+  }
+  .header-section.sticky .header-in {
+    animation: fade-down 600ms cubic-bezier(0.375, 0.880, 0.505, 0.910);
+  }
+  @keyframes fade-down {
+    0% {
+      transform: translate(0,-100%);
+    }
+    1000% {
+      transform: translate(0,0%);
+    }
+  }
 }
 /* header-end */
 
@@ -502,7 +535,10 @@ p:last-child{
   margin: 25px 0 0;
 }
 .product-view__description h3 {
-  font-size: 16px;
+  font-size: 18px;
+}
+.product-view__description p {
+  font-size: 14px;
 }
 .product-view__description__qr-row {
   display: flex;
@@ -672,6 +708,10 @@ p:last-child{
 .app-install_row .installation-options .install-link {
   height: 35px;
   display: inline-block;
+  transition: 0.3s;
+}
+.app-install_row .installation-options .install-link:hover {
+  transform: scale(1.04);
 }
 .app-install_row .installation-options .install-link img {
   max-height: 100%;
